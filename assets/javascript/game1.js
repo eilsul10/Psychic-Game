@@ -10,6 +10,8 @@ var wins=0;
 var losses=0;
 var computerGuess = randomChoices[Math.floor(Math.random() * randomChoices.length)];
 
+document.getElementById("showWins").textContent = wins;
+document.getElementById("showLosses").textContent = losses;
 document.getElementById("guesses-remaining").textContent = numberOfRemainingGuesses;
 
 function newGame() {
