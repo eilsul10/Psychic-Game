@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Word Guess Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+
+                <div id="game-section">
+                    <h1>The Psychic Game</h1>
+                    <div>
+                      <h3 class="section-title">Guess what letter I'm thinking of</h3>
+                    </div>
+
+                    <div>
+                        <h3 class="section-title">Wins</h3>
+                        <!-- The div where our wins will be shown. -->
+                        <div id="showWins"></div>
+                      </div>
+                    <div id="current-word-section">
+                      <h3 class="section-title">Losses</h3>
+                      <!-- The div where our current word (and guessing progress) will be shown. -->
+                      <div id="showLosses"></div>
+                    
+                    </div>
+                    <div id="guesses-remaining-section">
+                      <h3 class="section-title">Guesses left</h3>
+                      <!-- The div where our remaining guesses will be shown. -->
+                      <div id="guesses-remaining"></div>
+                    </div>
+                    <div id="guessed-letters-section">
+                      <h3 class="section-title">Your guesses so far</h3>
+                      <!-- The div where our guesses letters will be shown. -->
+                      <div id="guessed-letters"></div>
+                    </div>
+                  </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+
+<script src="assets/javascript/game1.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>
