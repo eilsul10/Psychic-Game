@@ -6,8 +6,8 @@ var randomChoices = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l",
     "u", "v", "w", "x", "y", "z"];
 
 // Initialize game
-var wins=0;
-var losses=0;
+var wins = 0;
+var losses = 0;
 var computerGuess = randomChoices[Math.floor(Math.random() * randomChoices.length)];
 
 document.getElementById("showWins").textContent = wins;
@@ -25,16 +25,32 @@ function newGame() {
 // Allow key to register
 document.onkeyup = function (event) {
     var userGuess = event.key;
+    var regex = /^[a-zA-Z]$/;
 
+    if (!userGuess.match(regex)) {
+        return
+    }
+    
     document.getElementById("guessed-letters").textContent += " " + userGuess;
 
+    // document.getElementById("guessed-letters").textContent += " " + userGuess;
+
     if (userGuess === computerGuess) {
-            wins++;
-            newGame()
-    } else if (userGuess != computerGuess) {
+        wins++;
+        newGame()
+
+    } else if (userGuess.match(regex) && (userGuess != computerGuess)) {
         numberOfRemainingGuesses--
-    }   
-    
+
+    }
+
+    // if (userGuess === computerGuess) {
+    //         wins++;
+    //         newGame()
+    // } else if (userGuess != computerGuess) {
+    //     numberOfRemainingGuesses--
+    // }   
+
     if (numberOfRemainingGuesses == 0) {
         losses++;
         newGame()
