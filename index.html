@@ -6,41 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Word Guess Game</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link href="https://fonts.googleapis.com/css?family=Oswald|Stylish" rel="stylesheet">
 </head>
 
 <body>
-    
-    <div class="container">
 
-        <div class="row">
-            <div class="col-md-12">
+    <div id="myModal" class="modal">
 
-                <div id="game-section">
-
-                        <div class="alert alert-success" role="alert">
-                                <h4 class="alert-heading">The Psychic Game</h4>
-                                <p>Guess what letter I'm thinking of</p>
-                                <hr>
-                                <p class="mb-0">Wins</p>
-                                <div id="showWins"></div>
-                                <p class="mb-0">Losses</p>
-                                <div id="showLosses"></div>
-                                <p class="mb-0">Guesses Left</p>
-                                <div id="guesses-remaining"></div>
-                                <p class="mb-0">Your guesses so far</p>
-                                <div id="guessed-letters"></div>
-                        </div>
-                
-            </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>You have lost! Please try again.</p>
         </div>
 
     </div>
 
+    <div class="header">
+        <h1>The Psychic Game</h1>
+        <p>Guess what letter I'm thinking of</p>
+    </div>
 
-<script src="assets/javascript/game1.js"></script>
+
+    <div class="main">
+
+
+        <p>Wins</p>
+        <div id="showWins"></div>
+        <p>Losses</p>
+        <div id="showLosses"></div>
+        <p>Guesses Left</p>
+        <div id="guesses-remaining"></div>
+        <p>Your guesses so far</p>
+        <div id="guessed-letters"></div>
+    </div>
+
+    <div class="footer">© Eileen Sul</div>
+
+    <script src="assets/javascript/game1.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
