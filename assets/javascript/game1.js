@@ -10,6 +10,21 @@ var wins = 0;
 var losses = 0;
 var computerGuess = randomChoices[Math.floor(Math.random() * randomChoices.length)];
 
+// Modal set up
+var modal = document.getElementById('myModal');
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
 document.getElementById("showWins").textContent = wins;
 document.getElementById("showLosses").textContent = losses;
 document.getElementById("guesses-remaining").textContent = numberOfRemainingGuesses;
@@ -33,8 +48,6 @@ document.onkeyup = function (event) {
     
     document.getElementById("guessed-letters").textContent += " " + userGuess;
 
-    // document.getElementById("guessed-letters").textContent += " " + userGuess;
-
     if (userGuess === computerGuess) {
         wins++;
         newGame()
@@ -44,17 +57,11 @@ document.onkeyup = function (event) {
 
     }
 
-    // if (userGuess === computerGuess) {
-    //         wins++;
-    //         newGame()
-    // } else if (userGuess != computerGuess) {
-    //     numberOfRemainingGuesses--
-    // }   
-
-    if (numberOfRemainingGuesses == 0) {
+    if (numberOfRemainingGuesses === 0) {
         losses++;
-        newGame()
-        alert("You have lost. Please try again.");
+        newGame();
+        modal.style.display = "block";
+
     }
 
     // Allow JS to link with HTML to show point count
